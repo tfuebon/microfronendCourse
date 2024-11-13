@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&display=swap');
+
+.counterContainer {
+    font-family: 'Finlandica', sans-serif;
+    padding: 1rem;
+    text-align: center;
+    color: snow;
+    background-color: #444;
+    width: 100%;
+}
