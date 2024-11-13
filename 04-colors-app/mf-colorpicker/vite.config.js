@@ -21,6 +21,9 @@ export default defineConfig({
     minify: false,
     cssCodeSplit: false,
   },
+  server: {
+    cors: true,
+  },
 });
 
 //import { defineConfig } from "vite";
