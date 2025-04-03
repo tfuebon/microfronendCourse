@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  host:
+    build:
+      context: ./host  # Apunta a la carpeta `host`
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    links:
+      - mf_navbar
+      - mf_counter
+      - mf_cards
+  mf_navbar:
+    build:
+      context: ./mf-navbar  # Apunta a la carpeta `mf-navbar`
+      dockerfile: Dockerfile
+    ports:
+      - "4173:4173"
+  mf_counter:
+    build:
+      context: ./mf-counter  # Apunta a la carpeta `mf-counter`
+      dockerfile: Dockerfile
+    ports:
+      - "4174:4174"
+  mf_cards:
+    build:
+      context: ./mf-cards  # Apunta a la carpeta `mf-cards`
+      dockerfile: Dockerfile
+    ports:
+      - "4175:4175"
+  #mf_detalle_personaje:
+  #  build:
+  #    context: ./mf-detalle-personaje  # Apunta a la carpeta `mf-detalle-personaje`
+  #    dockerfile: Dockerfile
+  #  ports:
+  #    - "4176:4176"

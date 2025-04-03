@@ -8,7 +8,7 @@ import { ColorList } from 'colorList/ColorList'
 
 function App() {
   //const [count, setCount] = useState(0)
-  const { color, handleChangeColor, handleSubmitSaveColor, onSubmit, colorList } = useColors();
+  const { color, handleChangeColor, handleSubmitSaveColor, onSubmit, colorList, handleClickClearColors } = useColors();
   //const colorsList = ['#0fcc7a', '#c90fcc', '#cc480f']
   //const colorsList = []
 
@@ -20,7 +20,7 @@ function App() {
         <div className="container-fluid mt-0">
             <div className="row">
                 <div className="col-12 col-md-4">
-                    <ColorList colorsList={colorList} />
+                    <ColorList colorsList={colorList} handleClickClearColors={handleClickClearColors} />
                 </div>
                 <div className="col-12 col-md-8">
                     <ColorPicker colorList={colorList} color={color} handleChangeColor={handleChangeColor} handleSubmitSaveColor={handleSubmitSaveColor} onSubmit={onSubmit} />
